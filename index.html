@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUCEI BILINGÜE</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        h1, h2 {
+            margin: 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>CUCEI BILINGÜE</h1>
+        <p>¡Explora vocabulario, gramática y practica con ejercicios básicos!</p>
+    </header>
+
+    <div class="container">
+        <!-- Sección de Vocabulario -->
+        <div class="section">
+            <h2>Vocabulario Básico</h2>
+            <ul id="vocabulario-lista">
+                <li>Apple - Manzana</li>
+                <li>Book - Libro</li>
+                <li>Cat - Gato</li>
+                <li>Dog - Perro</li>
+                <li>House - Casa</li>
+                <div class="hidden" id="more-vocabulario">
+                    <li>Car - Coche</li>
+                    <li>Sun - Sol</li>
+                    <li>Moon - Luna</li>
+                    <li>Water - Agua</li>
+                    <li>Fire - Fuego</li>
+                    <li>Tree - Árbol</li>
+                    <li>Grass - Césped</li>
+                    <li>Mountain - Montaña</li>
+                    <li>River - Río</li>
+                    <li>Lake - Lago</li>
+                    <li>Sky - Cielo</li>
+                    <li>Cloud - Nube</li>
+                    <li>Rain - Lluvia</li>
+                    <li>Snow - Nieve</li>
+                    <li>Wind - Viento</li>
+                    <li>Child - Niño</li>
+                    <li>Adult - Adulto</li>
+                    <li>Family - Familia</li>
+                    <li>Friend - Amigo</li>
+                    <li>School - Escuela</li>
+                    <li>Teacher - Maestro</li>
+                    <li>Student - Estudiante</li>
+                    <li>Classroom - Aula</li>
+                    <li>Pen - Bolígrafo</li>
+                    <li>Pencil - Lápiz</li>
+                    <li>Notebook - Cuaderno</li>
+                    <li>Desk - Escritorio</li>
+                    <li>Chair - Silla</li>
+                    <li>Food - Comida</li>
+                    <li>Drink - Bebida</li>
+                    <li>Breakfast - Desayuno</li>
+                    <li>Lunch - Almuerzo</li>
+                    <li>Dinner - Cena</li>
+                    <li>Fruit - Fruta</li>
+                    <li>Vegetable - Verdura</li>
+                    <li>Bread - Pan</li>
+                    <li>Milk - Leche</li>
+                    <li>Cheese - Queso</li>
+                    <li>Meat - Carne</li>
+                    <li>Fish - Pescado</li>
+                    <li>Egg - Huevo</li>
+                    <li>Salt - Sal</li>
+                    <li>Sugar - Azúcar</li>
+                    <li>Butter - Mantequilla</li>
+                    <li>Knife - Cuchillo</li>
+                    <li>Fork - Tenedor</li>
+                    <li>Spoon - Cuchara</li>
+                    <li>Plate - Plato</li>
+                    <li>Glass - Vaso</li>
+                    <li>Cup - Taza</li>
+                    <li>City - Ciudad</li>
+                    <li>Village - Pueblo</li>
+                    <li>Street - Calle</li>
+                    <li>Building - Edificio</li>
+                    <li>Park - Parque</li>
+                    <li>Garden - Jardín</li>
+                    <li>Bridge - Puente</li>
+                    <li>Road - Carretera</li>
+                    <li>Car - Coche</li>
+                    <li>Bus - Autobús</li>
+                    <li>Train - Tren</li>
+                    <li>Plane - Avión</li>
+                    <li>Boat - Barco</li>
+                    <li>Ship - Navío</li>
+                    <li>Market - Mercado</li>
+                    <li>Store - Tienda</li>
+                    <li>Bank - Banco</li>
+                    <li>Office - Oficina</li>
+                    <li>Hospital - Hospital</li>
+                    <li>Library - Biblioteca</li>
+                    <li>Museum - Museo</li>
+                    <li>Theater - Teatro</li>
+                    <li>Cinema - Cine</li>
+                    <li>Hotel - Hotel</li>
+                    <li>Bedroom - Dormitorio</li>
+                    <li>Bathroom - Baño</li>
+                    <li>Kitchen - Cocina</li>
+                    <li>Living room - Sala de estar</li>
+                    <li>Window - Ventana</li>
+                    <li>Door - Puerta</li>
+                    <li>Floor - Suelo</li>
+                    <li>Wall - Pared</li>
+                    <li>Roof - Techo</li>
+                    <li>Garden - Jardín</li>
+                    <li>Light - Luz</li>
+                    <li>Phone - Teléfono</li>
+                    <li>Computer - Computadora</li>
+                    <li>Television - Televisión</li>
+                    <li>Radio - Radio</li>
+                    <li>Clock - Reloj</li>
+                    <li>Picture - Cuadro</li>
+                    <li>Shirt - Camisa</li>
+                    <li>Pants - Pantalones</li>
+                    <li>Shoes - Zapatos</li>
+                    <li>Coat - Abrigo</li>
+                    <li>Socks - Calcetines</li>
+                    <li>Hat - Sombrero</li>
+                    <li>Gloves - Guantes</li>
+                    <li>Bag - Bolsa</li>
+                    <li>Wallet - Cartera</li>
+                    <li>Keys - Llaves</li>
+                    <li>Ring - Anillo</li>
+                    <li>Watch - Reloj</li>
+                    <li>Glasses - Gafas</li>
+                    <li>Umbrella - Paraguas</li>
+                </div>
+            </ul>
+            <button id="toggle-button" onclick="toggleVocabulario()">Ver más palabras</button>
+        </div>
+
+        <!-- Sección de Gramática en Inglés -->
+        <div class="section">
+            <h2>Gramática en Inglés</h2>
+            <p>En inglés, existen tres tiempos verbales básicos:</p>
+            <ul>
+                <li><strong>Presente Simple</strong>: Para acciones habituales. Ejemplo: "I walk to school" (Yo camino a la escuela).</li>
+                <li><strong>Pasado Simple</strong>: Para acciones que ocurrieron en el pasado. Ejemplo: "I walked to school" (Yo caminé a la escuela).</li>
+                <li><strong>Futuro Simple</strong>: Para acciones futuras. Ejemplo: "I will walk to school" (Yo caminaré a la escuela).</li>
+            </ul>
+        </div>
+
+        <!-- Sección de Pronunciación de los Números -->
+        <div class="section">
+            <h2>Pronunciación de los Números</h2>
+            <p>Estos son algunos números en inglés y su pronunciación aproximada:</p>
+            <ul>
+                <li><strong>1 - One</strong> (uán)</li>
+                <li><strong>2 - Two</strong> (tú)</li>
+                <li><strong>3 - Three</strong> (zrí)</li>
+                <li><strong>4 - Four</strong> (fór)</li>
+                <li><strong>5 - Five</strong> (faiv)</li>
+                <li><strong>10 - Ten</strong> (ten)</li>
+                <li><strong>20 - Twenty</strong> (twenti)</li>
+                <li><strong>100 - One hundred</strong> (wan hándréd)</li>
+            </ul>
+        </div>
+
+        <!-- Sección de Cómo Presentarse -->
+        <div class="section">
+            <h2>Cómo Presentarse</h2>
+            <p>Utiliza estas frases para presentarte en inglés:</p>
+            <ul>
+                <li>My name is [tu nombre]. - Me llamo [tu nombre].</li>
+                <li>I am [tu edad] years old. - Tengo [tu edad] años.</li>
+                <li>I live in [tu ciudad]. - Vivo en [tu ciudad].</li>
+                <li>I like [tu hobby]. - Me gusta [tu hobby].</li>
+            </ul>
+        </div>
+
+        <!-- Ejercicios -->
+        <div class="section">
+            <h2>Ejercicios</h2>
+            <button onclick="iniciarEjercicios()">Iniciar Ejercicios</button>
+        </div>
+    </div>
+
+    <script>
+        let preguntas = [
+            { pregunta: "¿Cómo se dice 'Perro' en inglés?", respuesta: "Dog" },
+            { pregunta: "¿Cómo se dice 'Casa' en inglés?", respuesta: "House" },
+            { pregunta: "¿Cómo se dice 'Gato' en inglés?", respuesta: "Cat" },
+            { pregunta: "¿Cómo se dice 'Manzana' en inglés?", respuesta: "Apple" },
+            { pregunta: "¿Cómo se dice 'Libro' en inglés?", respuesta: "Book" },
+            { pregunta: "¿Cómo se dice 'Coche' en inglés?", respuesta: "Car" },
+            { pregunta: "¿Cómo se dice 'Agua' en inglés?", respuesta: "Water" },
+            { pregunta: "¿Cómo se dice 'Fuego' en inglés?", respuesta: "Fire" },
+            { pregunta: "¿Cómo se dice 'Comida' en inglés?", respuesta: "Food" },
+            { pregunta: "¿Cómo se dice 'Escuela' en inglés?", respuesta: "School" }
+        ];
+
+        function iniciarEjercicios() {
+            let continuar = true;
+            while (continuar) {
+                let preguntaAleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
+                let respuestaUsuario = prompt(preguntaAleatoria.pregunta);
+                if (respuestaUsuario === preguntaAleatoria.respuesta) {
+                    alert("¡Correcto!");
+                } else {
+                    alert("Incorrecto. La respuesta correcta es: " + preguntaAleatoria.respuesta);
+                }
+                continuar = confirm("¿Quieres responder otra pregunta?");
+            }
+        }
+
+        function toggleVocabulario() {
+            const moreVocabulario = document.getElementById("more-vocabulario");
+            const button = document.getElementById("toggle-button");
+            if (moreVocabulario.classList.contains("hidden")) {
+                moreVocabulario.classList.remove("hidden");
+                button.innerText = "Ver menos palabras";
+            } else {
+                moreVocabulario.classList.add("hidden");
+                button.innerText = "Ver más palabras";
+            }
+        }
+    </script>
+</body>
+</html>

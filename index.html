@@ -11,33 +11,43 @@
             margin: 0;
             background-color: #f2f2f2;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         header {
             background-color: #4CAF50;
             padding: 20px;
             text-align: center;
             color: white;
+            width: 100%;
         }
         h1, h2 {
             margin: 10px;
         }
         .container {
+            display: flex;
+            flex-direction: row;
             padding: 20px;
+            width: 100%;
+            max-width: 800px;
         }
-        
+
         /* Estilos de pestañas */
         .tab-container {
             display: flex;
-            border-bottom: 2px solid #4CAF50;
+            flex-direction: column;
+            width: 200px;
+            margin-right: 20px;
         }
         .tab-button {
-            flex: 1;
             padding: 10px;
             cursor: pointer;
             text-align: center;
             background-color: #e9e9e9;
             color: #333;
             border: none;
+            border-bottom: 1px solid #ddd;
             outline: none;
             transition: background-color 0.3s;
         }
@@ -47,16 +57,16 @@
         }
         .tab-content {
             display: none;
+            flex: 1;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            margin-top: 20px;
         }
         .tab-content.active {
             display: block;
         }
-        
+
         button {
             padding: 10px 20px;
             font-size: 16px;
@@ -86,44 +96,105 @@
             <button class="tab-button" onclick="openTab(event, 'gramatica')">Gramática en Inglés</button>
             <button class="tab-button" onclick="openTab(event, 'pronunciacion')">Pronunciación de Números</button>
             <button class="tab-button" onclick="openTab(event, 'presentacion')">Cómo Presentarse</button>
+            <button class="tab-button" onclick="openTab(event, 'to-be')">Verbo To Be</button>
             <button class="tab-button" onclick="openTab(event, 'ejercicios')">Ejercicios</button>
         </div>
 
-        <!-- Contenido de las Pestañas -->
         <div id="vocabulario" class="tab-content active">
-            <h2>Vocabulario Básico</h2>
-            <ul id="vocabulario-lista">
-                <li>Apple - Manzana</li>
-                <li>Book - Libro</li>
-                <li>Cat - Gato</li>
-                <li>Dog - Perro</li>
-                <li>House - Casa</li>
-                <!-- Añade aquí más elementos del vocabulario -->
-            </ul>
-            <button onclick="toggleVocabulario()">Ver más palabras</button>
-        </div>
+    <h2>Vocabulario Básico</h2>
+    <p>Estas palabras son fundamentales para empezar a comunicarte en inglés:</p>
+    <ul>
+        <li><strong>Hello</strong> - Hola</li>
+        <li><strong>Goodbye</strong> - Adiós</li>
+        <li><strong>Please</strong> - Por favor</li>
+        <li><strong>Thank you</strong> - Gracias</li>
+        <li><strong>Yes</strong> - Sí</li>
+        <li><strong>No</strong> - No</li>
+        <li><strong>Excuse me</strong> - Perdón/Disculpe</li>
+        <li><strong>Sorry</strong> - Lo siento</li>
+        <li><strong>Help</strong> - Ayuda</li>
+        <li><strong>Water</strong> - Agua</li>
+        <li><strong>Food</strong> - Comida</li>
+        <li><strong>Bathroom</strong> - Baño</li>
+        <li><strong>Friend</strong> - Amigo/a</li>
+        <li><strong>Family</strong> - Familia</li>
+        <li><strong>Home</strong> - Hogar</li>
+        <li><strong>School</strong> - Escuela</li>
+        <li><strong>Work</strong> - Trabajo</li>
+        <li><strong>Love</strong> - Amor</li>
+        <li><strong>Happy</strong> - Feliz</li>
+        <li><strong>Sad</strong> - Triste</li>
+    </ul>
+</div>
 
-        <div id="gramatica" class="tab-content">
-            <h2>Gramática en Inglés</h2>
-            <p>En inglés, existen tres tiempos verbales básicos:</p>
-            <ul>
-                <li><strong>Presente Simple</strong>: Ejemplo: "I walk to school" (Yo camino a la escuela).</li>
-                <li><strong>Pasado Simple</strong>: Ejemplo: "I walked to school" (Yo caminé a la escuela).</li>
-                <li><strong>Futuro Simple</strong>: Ejemplo: "I will walk to school" (Yo caminaré a la escuela).</li>
-            </ul>
-        </div>
 
+       <div id="gramatica" class="tab-content">
+    <h2>Gramática en Inglés</h2>
+    <p>Aprender gramática es clave para formar oraciones correctas. Aquí tienes una guía básica:</p>
+
+    <h3>Tiempos Verbales</h3>
+    <ul>
+        <li><strong>Presente Simple</strong>: Para acciones habituales o hechos generales.
+            <br>Ejemplo: "I eat breakfast at 7 AM." (Yo desayuno a las 7 AM.)
+        </li>
+        <li><strong>Presente Continuo</strong>: Para acciones que están ocurriendo en este momento.
+            <br>Ejemplo: "She is studying now." (Ella está estudiando ahora.)
+        </li>
+        <li><strong>Pasado Simple</strong>: Para acciones completadas en el pasado.
+            <br>Ejemplo: "We watched a movie yesterday." (Vimos una película ayer.)
+        </li>
+        <li><strong>Futuro Simple</strong>: Para acciones que sucederán en el futuro.
+            <br>Ejemplo: "He will call you tomorrow." (Él te llamará mañana.)
+        </li>
+    </ul>
+
+    <h3>Estructuras Básicas</h3>
+    <ul>
+        <li><strong>Oraciones Afirmativas:</strong> Sujeto + Verbo + Complemento
+            <br>Ejemplo: "She likes apples." (A ella le gustan las manzanas.)
+        </li>
+        <li><strong>Oraciones Negativas:</strong> Sujeto + "do/does not" + Verbo + Complemento
+            <br>Ejemplo: "They do not play soccer." (Ellos no juegan fútbol.)
+        </li>
+        <li><strong>Preguntas:</strong> "Do/Does" + Sujeto + Verbo + Complemento
+            <br>Ejemplo: "Do you speak English?" (¿Hablas inglés?)
+        </li>
+    </ul>
+</div>
         <div id="pronunciacion" class="tab-content">
-            <h2>Pronunciación de los Números</h2>
-            <ul>
-                <li><strong>1 - One</strong> (uán)</li>
-                <li><strong>2 - Two</strong> (tú)</li>
-                <li><strong>3 - Three</strong> (zrí)</li>
-                <li><strong>4 - Four</strong> (fór)</li>
-                <li><strong>5 - Five</strong> (faiv)</li>
-                <!-- Añade aquí más números -->
-            </ul>
-        </div>
+    <h2>Pronunciación de los Números</h2>
+    <p>Aprender los números es esencial para contar, expresar cantidades o decir fechas en inglés. Aquí tienes una guía:</p>
+    <ul>
+        <li><strong>1 - One</strong> (uán)</li>
+        <li><strong>2 - Two</strong> (tú)</li>
+        <li><strong>3 - Three</strong> (zrí)</li>
+        <li><strong>4 - Four</strong> (fór)</li>
+        <li><strong>5 - Five</strong> (faiv)</li>
+        <li><strong>6 - Six</strong> (síks)</li>
+        <li><strong>7 - Seven</strong> (séven)</li>
+        <li><strong>8 - Eight</strong> (éit)</li>
+        <li><strong>9 - Nine</strong> (náin)</li>
+        <li><strong>10 - Ten</strong> (tén)</li>
+        <li><strong>11 - Eleven</strong> (iléven)</li>
+        <li><strong>12 - Twelve</strong> (tuelv)</li>
+        <li><strong>13 - Thirteen</strong> (zertín)</li>
+        <li><strong>14 - Fourteen</strong> (fortín)</li>
+        <li><strong>15 - Fifteen</strong> (fiftín)</li>
+        <li><strong>20 - Twenty</strong> (tuénti)</li>
+        <li><strong>30 - Thirty</strong> (zérti)</li>
+        <li><strong>40 - Forty</strong> (fórti)</li>
+        <li><strong>50 - Fifty</strong> (fífti)</li>
+        <li><strong>100 - One Hundred</strong> (uán jóndred)</li>
+        <li><strong>1,000 - One Thousand</strong> (uán táusan)</li>
+    </ul>
+    <h3>Consejos para la pronunciación:</h3>
+    <p>
+        - Para números como "13" y "30", nota que el acento está en diferentes sílabas: 
+        <strong>thirTEEN</strong> (zertín) vs. <strong>THIRty</strong> (zérti).  
+        <br>
+        - Practica contando en voz alta para mejorar tu fluidez.
+    </p>
+</div>
 
         <div id="presentacion" class="tab-content">
             <h2>Cómo Presentarse</h2>
@@ -136,6 +207,47 @@
             </ul>
         </div>
 
+        <div id="to-be" class="tab-content">
+    <h2>El Verbo "To Be"</h2>
+    <p>El verbo "to be" se usa para describir estados, identidades y ubicaciones. También se utiliza como auxiliar en tiempos compuestos.</p>
+
+    <h3>Conjugación en Presente</h3>
+    <ul>
+        <li><strong>I am</strong> - Yo soy/estoy</li>
+        <li><strong>You are</strong> - Tú eres/estás</li>
+        <li><strong>He/She/It is</strong> - Él/Ella/Eso es/está</li>
+        <li><strong>We are</strong> - Nosotros somos/estamos</li>
+        <li><strong>You are</strong> - Ustedes son/están</li>
+        <li><strong>They are</strong> - Ellos/Ellas son/están</li>
+    </ul>
+
+    <h3>Conjugación en Pasado</h3>
+    <ul>
+        <li><strong>I was</strong> - Yo fui/estuve</li>
+        <li><strong>You were</strong> - Tú fuiste/estuviste</li>
+        <li><strong>He/She/It was</strong> - Él/Ella/Eso fue/estuvo</li>
+        <li><strong>We were</strong> - Nosotros fuimos/estuvimos</li>
+        <li><strong>You were</strong> - Ustedes fueron/estuvieron</li>
+        <li><strong>They were</strong> - Ellos/Ellas fueron/estuvieron</li>
+    </ul>
+
+    <h3>Usos Comunes</h3>
+    <ul>
+        <li><strong>Descripciones:</strong> "He is tall." (Él es alto.)</li>
+        <li><strong>Ubicaciones:</strong> "We are at the park." (Estamos en el parque.)</li>
+        <li><strong>Emociones:</strong> "They are happy." (Ellos están felices.)</li>
+    </ul>
+
+    <h3>Ejercicios de Práctica</h3>
+    <p>Completa las siguientes oraciones con la forma correcta del verbo "to be":</p>
+    <ol>
+        <li>I ___ a teacher. (soy)</li>
+        <li>They ___ at home. (están)</li>
+        <li>She ___ very intelligent. (es)</li>
+        <li>We ___ friends. (somos)</li>
+        <li>You ___ late. (estás)</li>
+    </ol>
+</div>
         <div id="ejercicios" class="tab-content">
             <h2>Ejercicios</h2>
             <button onclick="iniciarEjercicios()">Iniciar Ejercicios</button>
@@ -143,7 +255,6 @@
     </div>
 
     <script>
-        // Función para abrir pestañas
         function openTab(event, tabName) {
             var i, tabcontent, tablinks;
             tabcontent = document.getElementsByClassName("tab-content");
@@ -156,34 +267,6 @@
             }
             document.getElementById(tabName).classList.add("active");
             event.currentTarget.classList.add("active");
-        }
-
-        // Función para iniciar ejercicios con más palabras y comparación de mayúsculas y minúsculas
-        function iniciarEjercicios() {
-            let preguntas = [
-                { pregunta: "¿Cómo se dice 'Perro' en inglés?", respuesta: "Dog" },
-                { pregunta: "¿Cómo se dice 'Gato' en inglés?", respuesta: "Cat" },
-                { pregunta: "¿Cómo se dice 'Libro' en inglés?", respuesta: "Book" },
-                { pregunta: "¿Cómo se dice 'Casa' en inglés?", respuesta: "House" },
-                { pregunta: "¿Cómo se dice 'Manzana' en inglés?", respuesta: "Apple" }
-            ];
-            let continuar = true;
-            while (continuar) {
-                let preguntaAleatoria = preguntas[Math.floor(Math.random() * preguntas.length)];
-                let respuestaUsuario = prompt(preguntaAleatoria.pregunta);
-                if (respuestaUsuario && respuestaUsuario.toLowerCase() === preguntaAleatoria.respuesta.toLowerCase()) {
-                    alert("¡Correcto!");
-                } else {
-                    alert("Incorrecto. La respuesta correcta es: " + preguntaAleatoria.respuesta);
-                }
-                continuar = confirm("¿Quieres responder otra pregunta?");
-            }
-        }
-
-        // Función para mostrar/ocultar vocabulario extra
-        function toggleVocabulario() {
-            const vocabularioLista = document.getElementById("vocabulario-lista");
-            vocabularioLista.classList.toggle("hidden");
         }
     </script>
 </body>
